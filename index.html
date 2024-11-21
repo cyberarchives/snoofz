@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Snoofz</title>
+    <link rel="icon" href="https://github.com/Snoofz/snoofz.github.io/blob/main/Logo.png?raw=true" type="image/png">
+    <style>
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #1d1f22;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #1DA1F2;
+            margin-bottom: 20px;
+        }
+
+        /* Add to the existing styles */
+
+.about, .skills, .projects, .socials, .contact {
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    backdrop-filter: blur(10px); /* applies the blur effect */
+    border-radius: 15px; /* optional: makes the corners rounded */
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* optional: adds a subtle shadow around the boxes */
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.about p, .skills p, .projects p, .socials p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #b0b0b0;
+}
+
+.projects ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.projects li {
+    margin-bottom: 10px;
+}
+
+.projects a {
+    color: #1DA1F2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.projects a:hover {
+    color: #4c9fe6;
+}
+
+
+        footer {
+            background-color: #1d1f22;
+            color: #b0b0b0;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #333;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .fade-effect {
+            animation: fadeIn 1s ease-in-out forwards;
+            font-size: 2em;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .rainbow-text {
+            animation: rainbow 5s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { color: #ff0000; }
+            14% { color: #ff9900; }
+            28% { color: #33cc33; }
+            42% { color: #3399ff; }
+            57% { color: #9933cc; }
+            71% { color: #ff3399; }
+            85% { color: #ff9933; }
+            100% { color: #ff0000; }
+        }
+
+        .button {
+            background-color: #1DA1F2;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #4c9fe6;
+        }
+
+        .social-links a {
+            color: #b0b0b0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #1DA1F2;
+        }
+
+        /* Background Video */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <video id="bg-video" autoplay loop muted>
+        <source src="https://cdn.discordapp.com/attachments/1286112153962811477/1309210952993996912/my_balls_itch_-_Made_with_Clipchamp.mp4?ex=6740c137&is=673f6fb7&hm=f7670116f394f3e815aacb6079354f3b8fcd7c4b33eed2f262b1aa01a6c6b76a&" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay" id="overlay" onclick="hideOverlay()">
+        <span class="fade-effect">Click to continue</span>
+    </div>
+
+    <header>
+        <h1>Snoofz's About Me</h1>
+        <p>A self-taught programmer & mechanical engineer</p>
+    </header>
+
+    <div class="container">
+        <main>
+            <section class="about">
+                <h2 class="section-title">About Me</h2>
+                <p>I'm Snoofz, an 18-year-old self-taught programmer and mechanical engineer. I specialize in engines, programming, and music production. I'm passionate about my work, from carburetors to engine builds, and also create music.</p>
+            </section>
+
+            <section class="skills">
+                <h2 class="section-title">Skills</h2>
+                <p>Programming languages: JavaScript, Python, C++</p>
+                <p>Mechanical skills: V6, V8, V-Twin engines, carburetor tuning</p>
+                <p>Music production: Ableton, FL Studio, Bandlab</p>
+            </section>
+
+            <section class="projects">
+                <h2 class="section-title">Projects</h2>
+                <ul>
+                    <li><a href="https://github.com/MilkyTheProgrammer/Unity-AutoKeyframe" target="_blank">Unity Auto Keyframing</a></li>
+                    <li><a href="https://github.com/Snoofz/gemoo-video-downloader/raw/main/gemoo-video-downloader.user.js" target="_blank">Gemoo Video Downloader</a></li>
+                    <li><a href="https://github.com/Snoofz/Neptune" target="_blank">Neptune (MPP Bot)</a></li>
+                    <li><a href="https://github.com/Snoofz/WelcomeCards" target="_blank">DiscordJS Welcome Cards</a></li>
+                    <li><a href="https://github.com/Snoofz/VRChat-Website-Tools" target="_blank">VRChat Website Tools</a></li>
+		    <a href="https://snoofz.site/" target="_blank">SnoofTube</a>
+		    <a href="https://github.com/Snoofz/bullet-force-vc-module" target="_blank">Bullet Force Voice Chat Module (Broken because of Lucas)</a>
+		    <a href="https://github.com/Snoofz/Vencord-Theme-Library" target="_blank">Vencord Theme Library</a>
+                </ul>
+            </section>
+
+            <section class="socials">
+                <h2 class="section-title">Find Me On</h2>
+                <div class="social-links">
+                    <a href="https://www.twitch.tv/snoofzthecanine" target="_blank">Twitch</a>
+                    <a href="https://youtube.com/@Snoofz" target="_blank">YouTube</a>
+                    <a href="https://soundcloud.com/mxgazine" target="_blank">SoundCloud</a>
+                    <a href="https://open.spotify.com/artist/1eakHPRgfz16nPlsfNM9iD?si=EoMgymWaRry7X1st7_CMqg" target="_blank">Spotify</a>
+                </div>
+            </section>
+
+            <section class="contact">
+                <h2 class="section-title">Contact</h2>
+                <p>Business Number: +1 (833) 498-1886</p>
+                <p>Discord: @snoofz</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Snoofz. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function hideOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+
+</body>
+</html>
